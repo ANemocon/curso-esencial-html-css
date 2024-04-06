@@ -1,0 +1,89 @@
+@font-face {
+    font-family: charter;
+    src: url(../fonts/charter-regular.otf);
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: charter-italic;
+    src: url(../fonts/charter-italic.otf);
+    font-style: italic;
+    font-weight: 400;
+}
+@font-face {
+    font-family: charter-bold;
+    src: url(../fonts/charter-bold.otf);
+    font-style: normal;
+    font-weight: bold;
+}
+@font-face {
+    font-family: charter-semibold;
+    src: url(../fonts/charter-bold-italic.otf);
+    font-style: italic;
+    font-weight: bold;
+}
+:root {
+    --grey : #212121; 
+    --mediumgrey: #212429;
+    --darkgrey : #616161;
+
+}
+
+body {
+    color: var(--grey);
+    font-family: "Roboto", sans-serif;
+}
+.hero{
+    background-image: linear-gradient(to top, rgba(255,255,255,0.3), transparent), url('../img/pattern.png');
+    height: 350px;
+}
+nav {
+width: 40vw;
+}
+a {
+    color:var(--grey);
+}
+header {
+    font-size: 14px;
+    color: var(--darkgrey);
+}
+header a{
+    text-decoration: none;
+    color: var(--darkgrey);
+}
+nav details summary {
+   font-weight: bold;
+}
+header a:hover {
+    color: var(--grey);
+}
+h1 {
+    font-size: 60px;
+}
+h2 {
+    font-size: 2em;
+}
+h3 {
+    font-size: 24px;
+}
+
+pre{
+    background-color: #FEC62E;
+}
+.section-content{
+    counter-reset: titleList;
+}
+.section-content h3{
+    counter-increment: titleList;
+}
+.section-content h3::before{
+content: counter(titleList, decimal) '. ';
+}
+
+.section-content h3::after{
+content: '';
+width: 32px;
+height: 4px;
+background-color: var(--darkgrey);
+display: inline-block;
+}
