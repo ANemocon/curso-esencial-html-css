@@ -41,20 +41,21 @@ hr{
 }
 .hero{
     background-image: linear-gradient(96.07deg, #314755 30.63%, #26A0DA 102.18%);
-    height: 350px;
+    block-size: 50px;
 }
 a {
     color:var(--white);
 }
+.header{
+
+}
+.header-content{
+    padding-inline: 20px;
+}
 header {
+    margin-block-start: 45px;
     font-size: 14px;
     color: var(--white);
-    position: absolute;
-    inset-block-start: 0;
-    inset-inline-start: -232px;
-    /* background-color: red; */
-    inline-size: 188px;
-
 }
 header a{
     text-decoration: none;
@@ -71,18 +72,11 @@ nav details summary {
 header a:hover {
     color: var(--white);
 }
-.header{
-    position: sticky;
-    inset-block-start: -45px;
-}
-.header-content{
-    position: relative;
-    inset-block-start: 65px;
-}
+
 h1 {
-    font-size: 60px;
+    font-size: 40px;
     margin-block-start: 64px;
-    margin-inline-end: 16px;
+    margin-inline-end: 20px;
 }
 h2 {
     font-size: 2em;
@@ -205,4 +199,43 @@ blockquote p{
 }
 .form input::-webkit-input-placeholder{
     color: var(--mediumwhite);
+}
+
+@media screen and (min-width: 1366px){
+    .hero{
+        block-size: 350px;
+    }
+    header {
+        font-size: 14px;
+        color: var(--white);
+        position: absolute;
+        inset-block-start: 0;
+        inset-inline-start: -232px;
+        inline-size: 188px;
+    
+    }
+    header a{
+        text-decoration: none;
+        color: var(--mediumwhite);
+    }
+    header li{
+        color: var(--mediumwhite);
+        margin-block-end: 16px;
+    }
+    header a:hover {
+        color: var(--white);
+    }
+    .header{
+        position: sticky;
+        inset-block-start: -45px;
+    }
+    .header-content{
+        position: relative;
+        inset-block-start: 65px;
+        padding-inline: 0;
+    }
+    h1 {
+        font-size: 60px;
+        margin-inline-end: 16px;
+    }
 }
